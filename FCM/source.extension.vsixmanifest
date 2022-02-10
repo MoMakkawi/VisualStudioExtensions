@@ -5,6 +5,7 @@
         <DisplayName>Functional Code Map</DisplayName>
         <Description xml:space="preserve">Functional Code Map Extension similar to a Code Map but gives an insight into the functional architecture of the system, the output of Functional Code Map Extension is a functional flow block diagram .Functional Code Map Extension similar to a Code Map but gives an insight into the functional architecture of the system, the output of Functional Code Map Extension is a functional flow block diagram</Description>
         <Icon>SketchflowTransitionEffect.png</Icon>
+        <PreviewImage>SketchflowTransitionEffect16.png</PreviewImage>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
