@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  
+  <Include href="KnownImageIds.vsct"/>
+  
+  <Commands package="guidFCMPackage">
+
+    <Groups>
+      <Group guid="guidFCMPackageCmdSet" id="MyMenuGroup" priority="0x0100">
+          <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+    </Groups>
+
+
+    <Buttons>
+      <Button guid="guidFCMPackageCmdSet" id="FCMCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidFCMPackageCmdSet" id="MyMenuGroup" />
+         <Icon guid="ImageCatalogGuid" id="SketchflowTransitionEffect" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Show on Functional Code Map</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+  </Commands>
+
+  <VisibilityConstraints>
+      <VisibilityItem guid="guidFCMPackageCmdSet" id="FCMCommandId" context="guidFCMUIRule">
+    </VisibilityItem>
+  </VisibilityConstraints>
+  
+  <Symbols>
+    <GuidSymbol name="guidFCMPackage" value="{981616b2-7e7e-4ed6-bf04-26b395a53bbb}" />
+    <GuidSymbol name="guidFCMUIRule" value="{69760bd3-80f0-4901-818d-c4656aaa08e9}" />
+    
+    <GuidSymbol name="guidFCMPackageCmdSet" value="{55165515-0f3b-4427-b4bc-5e023897d0cd}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="FCMCommandId" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
